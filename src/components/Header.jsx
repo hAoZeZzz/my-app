@@ -19,20 +19,8 @@ function Header() {
                 textDecoration: "none"
             }}
           >
-            <Link to='/'>Welcome to WorldSport</Link>
+            <Link to='/'>Welcome to WorldSportAction</Link>
           </Typography>
-          {/* <Box sx={{flexGrow: 1, display: { xs: 'none', md: 'flex'}}}>
-            <Button
-              key="Borrowing"
-              sx={{ my: 2, color:'white', display: 'block'}}>
-                  <Link to="/BorrowingRules">Borrowing Rules</Link>
-            </Button>
-            <Button
-                key="Eligibility"
-                sx={{ my: 2, color:'white', display: 'block'}}>
-                    <Link to="/FinalsEligibility">Finals Eligibility</Link>
-            </Button>
-          </Box> */}
         </Toolbar>
       </Container>
     </AppBar>
