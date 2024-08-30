@@ -6,6 +6,7 @@ const options = ['All', "Men's", "Women's", "Men's U23", "Women's U23", "Men's (
 
 function BorrowingRulesCard(props) {
   const [rule, setRule] = useState(props.rule);
+  const [selectedRules, setSelectedRules] = useState(['All']);
   const [selectedOptions, setSelectedOptions] = useState(['All']);
   const [isAllDivisions, setIsAllDivisions] = useState(true);
 
@@ -41,8 +42,8 @@ function BorrowingRulesCard(props) {
                 style={{marginTop:'10px'}}
                 multiple
                 options={options}
-                value={selectedOptions}
-                onChange={(event, newValue) => setSelectedOptions(newValue)}
+                value={selectedRules}
+                onChange={(event, newValue) => setSelectedRules(newValue)}
                 renderTags={(value, getTagProps) =>
                   value.map((option, index) => (
                     <Chip
@@ -50,7 +51,7 @@ function BorrowingRulesCard(props) {
                       label={option}
                       {...getTagProps({ index })}
                       onDelete={() => {
-                        setSelectedOptions(value.filter((val) => val !== option));
+                        setSelectedRules(value.filter((val) => val !== option));
                       }}
                     />
                   ))

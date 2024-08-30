@@ -77,9 +77,9 @@ const EligibilityCard =(props) => {
               <Autocomplete
                 style={{marginTop:'10px', width:'80%'}}
                 multiple
-                options={options}
-                value={selectedOptions}
-                onChange={(event, newValue) => setSelectedOptions(newValue)}
+                options={rounds}
+                value={selectedRounds}
+                onChange={(event, newValue) => setSelectedRounds(newValue)}
                 renderTags={(value, getTagProps) =>
                   value.map((option, index) => (
                     <Chip
@@ -87,7 +87,7 @@ const EligibilityCard =(props) => {
                       label={option}
                       {...getTagProps({ index })}
                       onDelete={() => {
-                        setSelectedOptions(value.filter((val) => val !== option));
+                        setSelectedRounds(value.filter((val) => val !== option));
                       }}
                     />
                   ))
@@ -96,7 +96,7 @@ const EligibilityCard =(props) => {
                   <TextField {...params} placeholder="Click to Add" />
                 )}
               />
-              <DeleteOutlineIcon onClick={()=> setSelectedOptions([])} />
+              <DeleteOutlineIcon onClick={()=> setSelectedRounds([])} />
             </Stack>
           )}
         </FormGroup>
