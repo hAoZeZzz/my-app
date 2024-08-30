@@ -2,6 +2,7 @@ import { Button, Checkbox, Container, FormControlLabel, FormGroup, Stack, Typogr
 import React, { useState } from "react";
 import EligibilityCard from "./EligibilityCard";
 import { Link } from "react-router-dom";
+import Eligible from "./Eligibile";
 
 const Eligibility =() => {
   const [allDivisions, setAllDivisions] = useState(true)
@@ -33,7 +34,8 @@ const Eligibility =() => {
                   />} 
           label="All Divisions" />
       </FormGroup>
-      {!allDivisions && (
+      {allDivisions ? (<Eligible rule={rules[0]}/>) 
+      : (
         <>
           {rules.map((rule, index) => (
             <Stack key={index} spacing={2}>
