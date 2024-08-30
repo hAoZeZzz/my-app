@@ -1,6 +1,7 @@
-import { Checkbox, Container, FormControlLabel, FormGroup, Stack, Typography } from "@mui/material";
+import { Button, Checkbox, Container, FormControlLabel, FormGroup, Stack, Typography } from "@mui/material";
 import React, { useState } from "react";
 import EligibilityCard from "./EligibilityCard";
+import { Link } from "react-router-dom";
 
 const Eligibility =() => {
   const [allDivisions, setAllDivisions] = useState(true)
@@ -43,7 +44,8 @@ const Eligibility =() => {
           ))}
           <button onClick={addRuleGroup}>+ Add Group/Division</button>
         </>
-      )} 
+      )}
+      <Button component={Link} to="/QualifiedPlayers" variant="outlined" color="error">Retrieve</Button>
     </Container>
   )
 }

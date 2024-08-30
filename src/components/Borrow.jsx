@@ -1,7 +1,8 @@
-import { Container, Stack, Typography } from "@mui/material";
+import { Button, Container, Stack, Typography } from "@mui/material";
 import React, {useState} from "react";
 import BorrowingRulesCard from "./BorrowRulesCard";
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import { Link } from "react-router-dom";
 
 const Borrow = () => {
   const [rules, setRules] = useState([
@@ -34,6 +35,7 @@ const Borrow = () => {
         ))}
         <button onClick={addRuleGroup}>+ Add Group/Division</button>
       </div>
+      <Button component={Link} to="/QualifiedPlayers" variant="outlined" color="error">Retrieve</Button>
     </Container>
   )
 }

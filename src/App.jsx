@@ -13,6 +13,7 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path='/borrowingrules' element={<Borrow />}/>
             <Route path='/finalseligibility' element={<Eligibility />} />
+            <Route path='/QualifiedPlayers' />
           </Route>
         </Routes>
       </BrowserRouter>
